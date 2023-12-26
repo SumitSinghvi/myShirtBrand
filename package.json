@@ -23,5 +23,11 @@
   },
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.16",
+    "gatsby-plugin-postcss": "^6.13.0",
+    "postcss": "^8.4.32",
+    "tailwindcss": "^3.4.0"
   }
 }

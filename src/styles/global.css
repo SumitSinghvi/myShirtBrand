@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Montserrat&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+*{
+    font-family:'Montserrat',sans-serif;
+}
+
+.perfectfit{
+    font-size: 12px; 
+}
+
+.font-Baskerville{
+    font-family:'Libre Baskerville';
+}
+
+.group-hover p:first-child {
+    opacity: 0;
+}
+  
+.group-hover p:last-child {
+    opacity: 1;
+}
+
+.dot{
+    user-select: none;
+}
+
+.active-dot{
+    color:red;
+}
+
+#navBar {
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Adjust z-index as needed */
+    background-color: #ffffff; /* Set your desired background color */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow effect */
+}
+
+/* Styles for the dropdown menu */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu {
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 5px 0;
+    z-index: 1;
+}
+
+.dropdown-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.dropdown-menu li {
+    padding: 8px 15px;
+}
+
+.dropdown-menu a {
+    text-decoration: none;
+    color: black;
+    display: block;
+}
+
+/* Hide dropdown by default */
+.dropdown-menu {
+    display: none;
+}
