@@ -52,13 +52,13 @@ export default function Footer() {
                 <p className="text-xs py-1">or phone our team</p>
                 <p className="text-xs py-1 text-red-400">+91 8615526635</p>
                 <div className="flex gap-4 pt-2">
-                    {/* <a href="https://www.facebook.com/yourpage" target="_blank" className="fab fa-facebook-square"></a>
+                    <a href="https://www.instagram.com/sumit_jain.png/" target="_blank" className="fab fa-facebook-square"></a>
   
-                    <!-- Instagram Icon -->
-                    <a href="https://www.instagram.com/yourpage" target="_blank" className="fab fa-instagram-square"></a>
+                    
+                    <a href="https://www.instagram.com/sumit_jain.png/" target="_blank" className="fab fa-instagram-square"></a>
   
-                    <!-- Twitter Icon -->
-                    <a href="https://twitter.com/yourpage" target="_blank" className="fab fa-twitter-square"></a> */}
+                    
+                    <a href="https://www.instagram.com/sumit_jain.png/" target="_blank" className="fab fa-twitter-square"></a>
 
                 </div>
             </div>

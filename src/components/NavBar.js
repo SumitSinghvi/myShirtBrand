@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
-export default function NavBar() {
+export default function NavBar() { 
   return (
     <nav id="navBar">
     <div className="bg-black h-8 flex items-center px-8">
@@ -14,10 +14,10 @@ export default function NavBar() {
             <p className="text-black perfectfit cursor-pointer dropdown-toggle" data-dropdown="men">MEN</p>
             <div className="dropdown-menu hidden" data-dropdown-menu="men">
                 <ul className="list-none">
-                    {/* <li><a href="#" className="text-black perfectfit cursor-pointer">Shirts</a></li>
-                    <li><a href="#" className="text-black perfectfit cursor-pointer">Printed</a></li>
-                    <li><a href="#" className="text-black perfectfit cursor-pointer">Linen</a></li>
-                    <li><a href="#" className="text-black perfectfit cursor-pointer">Pants</a></li> */}
+                    <li><p className="text-black perfectfit cursor-pointer">Shirts</p></li>
+                    <li><p className="text-black perfectfit cursor-pointer">Printed</p></li>
+                    <li><p className="text-black perfectfit cursor-pointer">Linen</p></li>
+                    <li><p className="text-black perfectfit cursor-pointer">Pants</p></li>
                     {/* Add more options as needed */}
                 </ul>
             </div>
@@ -26,8 +26,11 @@ export default function NavBar() {
             <p className="text-black perfectfit cursor-pointer dropdown-toggle" data-dropdown="women">WOMEN</p>
             <div className="dropdown-menu hidden" data-dropdown-menu="women">
                 <ul className="list-none">
-                    {/* <!-- Women's dropdown options -->
-                    <!-- ... --> */}
+                    <li><p className="text-black perfectfit cursor-pointer">Shirts</p></li>
+                    <li><p className="text-black perfectfit cursor-pointer">Printed</p></li>
+                    <li><p className="text-black perfectfit cursor-pointer">Linen</p></li>
+                    <li><p className="text-black perfectfit cursor-pointer">Pants</p></li>
+                    {/* <!-- Women's dropdown options --> */}
                 </ul>
             </div>
         </div>
@@ -35,8 +38,10 @@ export default function NavBar() {
             <p className="text-black perfectfit cursor-pointer dropdown-toggle" data-dropdown="accessories">ACCESSORIES</p>
             <div className="dropdown-menu hidden" data-dropdown-menu="accessories">
                 <ul className="list-none">
-                    {/* <!-- Accessories dropdown options -->
-                    <!-- ... --> */}
+                    <li><p className="text-black perfectfit cursor-pointer">Shirts</p></li>
+                    <li><p className="text-black perfectfit cursor-pointer">Printed</p></li>
+                    <li><p className="text-black perfectfit cursor-pointer">Linen</p></li>
+                    <li><p className="text-black perfectfit cursor-pointer">Pants</p></li>
                 </ul>
             </div>
         </div>
