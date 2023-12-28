@@ -1,69 +1,45 @@
-import React from 'react'
-import { Link } from 'gatsby'
+import React, { useState } from 'react'
 
-export default function NavBar() { 
-  return (
-    <nav id="navBar">
-    <div className="bg-black h-8 flex items-center px-8">
-        <p className="text-red-500 perfectfit  cursor-pointer" >Perfect Fit Guarantee</p>
-        <p className="text-gray-400 perfectfit ml-auto ">Contact us: <span className="text-red-500 perfectfit">+91 8615820501   </span></p>
-    </div>
-    <nav className="bg-white h-11 flex items-center justify-between px-8">
-        <Link to='/'> <p className="text-black text-2xl font-serif cursor-pointer">BARUCHE</p> </Link>
-        <div className="dropdown">
-            <p className="text-black perfectfit cursor-pointer dropdown-toggle" data-dropdown="men">MEN</p>
-            <div className="dropdown-menu hidden" data-dropdown-menu="men">
-                <ul className="list-none">
-                    <li><p className="text-black perfectfit cursor-pointer">Shirts</p></li>
-                    <li><p className="text-black perfectfit cursor-pointer">Printed</p></li>
-                    <li><p className="text-black perfectfit cursor-pointer">Linen</p></li>
-                    <li><p className="text-black perfectfit cursor-pointer">Pants</p></li>
-                    {/* Add more options as needed */}
-                </ul>
+export default function Navbar() {
+    const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+    const toggleDropdown = () => {
+        setIsDropdownOpen(!isDropdownOpen);
+    };
+
+    const closeDropdown = () => {
+        setIsDropdownOpen(false);
+    };
+    return (
+    <nav>
+        <div className='bg-black text-white uppercase h-4 smallsizetext flex justify-center gap-12'>
+            <p>Perfect fit Assurance</p>
+            <p>fast delivery</p>
+            <p>custom fitting</p>
+        </div>
+        <div className='shadow-md relative z-10 flex justify-between px-10 py-4'>
+            <div className='text-xs flex gap-8 text-gray-600 font-semibold'>
+                <button className='hover:border-b-2 hover:border-black' onClick={toggleDropdown} onBlur={closeDropdown}>Shop</button>
+                {isDropdownOpen && (
+                <div className='absolute '>
+                    <p>hi</p>
+                </div>
+                )}
+                <button className='hover:border-b-2 hover:border-black'>Collections</button>
+                
+                <button className='hover:border-b-2 hover:border-black'>About</button>
+            
+            </div>
+            <p className='font-semibold mr-24'>BARUCHE</p>
+            <div className='flex gap-4 pt-1'>
+                <i className="fas fa-user"></i>
+                <i className="fas fa-heart"></i>
+                <i className="fas fa-shopping-cart"></i>
             </div>
         </div>
-        <div className="dropdown">
-            <p className="text-black perfectfit cursor-pointer dropdown-toggle" data-dropdown="women">WOMEN</p>
-            <div className="dropdown-menu hidden" data-dropdown-menu="women">
-                <ul className="list-none">
-                    <li><p className="text-black perfectfit cursor-pointer">Shirts</p></li>
-                    <li><p className="text-black perfectfit cursor-pointer">Printed</p></li>
-                    <li><p className="text-black perfectfit cursor-pointer">Linen</p></li>
-                    <li><p className="text-black perfectfit cursor-pointer">Pants</p></li>
-                    {/* <!-- Women's dropdown options --> */}
-                </ul>
-            </div>
+        <div className='bg-gray-100 flex justify-center items-center h-6 smallsizetext font-semibold tracking-widest'>
+            <p>Shop Confidently with Our Fit Guarantee!</p>
         </div>
-        <div className="dropdown">
-            <p className="text-black perfectfit cursor-pointer dropdown-toggle" data-dropdown="accessories">ACCESSORIES</p>
-            <div className="dropdown-menu hidden" data-dropdown-menu="accessories">
-                <ul className="list-none">
-                    <li><p className="text-black perfectfit cursor-pointer">Shirts</p></li>
-                    <li><p className="text-black perfectfit cursor-pointer">Printed</p></li>
-                    <li><p className="text-black perfectfit cursor-pointer">Linen</p></li>
-                    <li><p className="text-black perfectfit cursor-pointer">Pants</p></li>
-                </ul>
-            </div>
-        </div>
-        <p className="text-black perfectfit cursor-pointer">DEALS</p>
-        <div className="dropdown">
-            <p className="text-black perfectfit cursor-pointer dropdown-toggle" data-dropdown="design">DESIGN</p>
-            <div className="dropdown-menu hidden" data-dropdown-menu="design">
-                <ul className="list-none">
-                    {/* <!-- Design dropdown options -->
-                    <!-- ... --> */}
-                </ul>
-            </div>
-        </div>
-        <p className="text-black perfectfit cursor-pointer">WEDDINGS</p>
-        <p className="text-black perfectfit cursor-pointer">CORPORATE PARTNERSHIP</p>
-        <button className="text-white perfectfit cursor-pointer bg-black hover:text-red-500 py-2 px-4 ml-16">BOOK FITTING</button>
-        <p className="text-black perfectfit cursor-pointer">SHOWROOM</p>
-        <p className="text-black perfectfit cursor-pointer">MEASUREMENT</p>
-        <Link to='/about'> <p className="text-black perfectfit cursor-pointer">ABOUT</p> </Link> 
-        <i className="fas fa-user mr-1 cursor-pointer"></i>
-        <i className="fas fa-shopping-cart ml-1 cursor-pointer"></i>          
-    </nav>
     </nav>
   )
 }
