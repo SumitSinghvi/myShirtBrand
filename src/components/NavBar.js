@@ -1,17 +1,19 @@
 import React, { useState } from 'react'
+import Dropdown from './Dropdown';
 
 export default function Navbar() {
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+    const [dropdownElement, setDropdownelement] = useState('');
 
-    const toggleDropdown = () => {
-        setIsDropdownOpen(!isDropdownOpen);
+    const toggleDropdown = (element) => {
+        if(dropdownElement === '' || dropdownElement === element) {
+            setIsDropdownOpen(prev => !prev);
+        }          
+        setDropdownelement(element)
     };
 
-    const closeDropdown = () => {
-        setIsDropdownOpen(false);
-    };
     return (
-    <nav>
+    <nav className='bg-white sticky top-0 z-10'>
         <div className='bg-black text-white uppercase h-4 smallsizetext flex justify-center gap-12'>
             <p>Perfect fit Assurance</p>
             <p>fast delivery</p>
@@ -19,16 +21,9 @@ export default function Navbar() {
         </div>
         <div className='shadow-md relative z-10 flex justify-between px-10 py-4'>
             <div className='text-xs flex gap-8 text-gray-600 font-semibold'>
-                <button className='hover:border-b-2 hover:border-black' onClick={toggleDropdown} onBlur={closeDropdown}>Shop</button>
-                {isDropdownOpen && (
-                <div className='absolute '>
-                    <p>hi</p>
-                </div>
-                )}
-                <button className='hover:border-b-2 hover:border-black'>Collections</button>
-                
-                <button className='hover:border-b-2 hover:border-black'>About</button>
-            
+                <button className='hover:border-b-2 hover:border-black' onClick={() => { toggleDropdown('Shop') }}>Shop</button>
+                <button className='hover:border-b-2 hover:border-black' onClick={() => { toggleDropdown('Collections') }}>Collections</button>
+                <button className='hover:border-b-2 hover:border-black' onClick={() => { toggleDropdown('About') }}>About</button>
             </div>
             <p className='font-semibold mr-24'>BARUCHE</p>
             <div className='flex gap-4 pt-1'>
@@ -37,8 +32,8 @@ export default function Navbar() {
                 <i className="fas fa-shopping-cart"></i>
             </div>
         </div>
-        <div className='bg-gray-100 flex justify-center items-center h-6 smallsizetext font-semibold tracking-widest'>
-            <p>Shop Confidently with Our Fit Guarantee!</p>
+        <div>
+            {isDropdownOpen && (<Dropdown whichelement={dropdownElement}/>)}
         </div>
     </nav>
   )
