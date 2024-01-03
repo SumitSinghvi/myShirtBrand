@@ -1,3 +1,4 @@
+import { Link } from 'gatsby'
 import React from 'react'
 
 export default function Dropdown({whichelement}) {
@@ -6,12 +7,12 @@ export default function Dropdown({whichelement}) {
             <div className='flex px-10 py-4 gap-20 lesssizetext'>
                 <div className='flex flex-col gap-1.5 hover:cursor-pointer'>
                     <p className='font-bold text-xs mb-1 hover:underline'>DRESS SHIRTS</p>
-                    <p className='hover:underline'>Business shirts</p>
-                    <p className='hover:underline'>Work shirts</p>
-                    <p className='mb-4 hover:underline'>casual shirts</p>
-                    <p className='font-bold text-xs hover:underline'>OVERSHIRTS</p>
-                    <p className='font-bold text-xs hover:underline'>POLO SHIRTS</p>
-                    <p className='font-bold text-xs hover:underline'>T-SHIRTS</p>
+                    <Link to='/all-shirts/business-shirts'> <p className='hover:underline'>Business shirts</p> </Link>
+                    <Link to='/all-shirts/casual-shirts'> <p className='hover:underline'>Business casuel shirts</p> </Link>
+                    <Link to='/all-shirts/work-shirts'> <p className='mb-4 hover:underline'>Work shirts</p> </Link>
+                    <Link to='/all-shirts/overshirts'> <p className='font-bold text-xs hover:underline'>OVERSHIRTS</p> </Link>
+                    <Link to='/all-shirts/polo-shirts'> <p className='font-bold text-xs hover:underline'>POLO SHIRTS</p> </Link>
+                    <Link to='/all-shirts/t-shirts'> <p className='font-bold text-xs hover:underline'>T-SHIRTS</p> </Link>
                 </div>
                 <div className='flex flex-col gap-1.5 hover:cursor-pointer'>
                     <p className='font-bold text-xs hover:underline'>PANTS</p>

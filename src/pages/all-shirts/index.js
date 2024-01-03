@@ -4,7 +4,7 @@ import Hero from '../../components/CategoryLayout/Hero'
 import Filter from '../../components/CategoryLayout/Filter'
 import ProductGrid from '../../components/CategoryLayout/ProductGrid'
 
-export default function WorkShirts() {
+export default function Home() {
   const products =[
     // Your product data here
     { id: 1, img:'https://rnd2.tailorstore.com/MTAyNHx8OTB8ZmZmZmZm/images/catalog/2452852_2.jpg' ,name: 'Chester, gray and blue', description: 'Blue checkered business shirt', price: 29.99, rating:4.8/5 },
@@ -20,9 +20,9 @@ export default function WorkShirts() {
 
   const hero = [
     { 
-      img:"https://images.tailorstore.com/YToyOntzOjU6IndpZHRoIjtzOjQ6IjIwMDAiO3M6NjoiaGVpZ2h0IjtzOjA6IiI7fQ%3D%3D/images/cms/yrkesskjortor_2453665_1_header_.jpg",
-      title:"Work shirts",
-      description:"Elevate your professional attire with our custom-made shirts designed for priests and pilots. These work shirts prioritize both comfort and timeless style. You have the option to select from our pre-made designs or unleash your creativity using our shirt designer tool."
+      img:"https://rnd2.tailorstore.com/MTkyMHx8OTB8ZmZmZmZm/images%2Fcms%2Falla_skjortor_2452802_1_header.jpg",
+      title:"All shirts",
+      description:"Get inspired by our selection of pre-designed dress shirts, all with your unique fit to them. Grab them as they are or customize to your needs using our design tool. Discover the superior quality in a custom-made dress shirt easy, fast and customized to your wishes."
     },
   ]
 

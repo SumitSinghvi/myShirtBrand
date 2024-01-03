@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Dropdown from './Dropdown';
+import { Link } from 'gatsby';
 
 export default function Navbar() {
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -36,7 +37,9 @@ export default function Navbar() {
                 <button className='hover:border-b-2 hover:border-black' onClick={() => { toggleDropdown('Collections') }}>Collections</button>
                 <button className='hover:border-b-2 hover:border-black' onClick={() => { toggleDropdown('About') }}>About</button>
             </div>
-            <p className='font-semibold flex-1'>BARUCHE</p>
+            <Link to='/' className='font-semibold flex-1'> 
+            <p >BARUCHE</p>
+            </Link> 
             <div className='flex gap-4 ml-auto items-center justify-center'>
                 <i className="fas fa-user"></i>
                 <i className="fas fa-heart"></i>
