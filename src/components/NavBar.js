@@ -21,7 +21,7 @@ export default function Navbar() {
           navSecondDiv.classList.remove('shadow-sm');
           navSecondDiv.classList.add('shadow-md');
         }
-    }, [isDropdownOpen]);
+        }, [isDropdownOpen]);
 
     return (
     <nav className='bg-white sticky top-0 z-10'>
